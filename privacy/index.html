@@ -27,13 +27,14 @@
 <h1>Privacy Policy</h1>
 <p class="meta">Giftmint for iPhone · Effective 17 October 2026</p>
 
-<p class="lead">Giftmint is a gift-card wallet that works entirely on your iPhone. We do not run a
+<p class="lead">Giftmint is a gift-card wallet that works on your iPhone. We do not run a
 server that receives your information, we do not have accounts, and we do not collect analytics.
 This page explains exactly what the app stores, where it stores it, and what leaves your device —
 in plain language.</p>
 
 <div class="callout">
-  <strong>The short version.</strong> Your cards stay on your iPhone. We never see them.
+  <strong>The short version.</strong> Your cards stay on your iPhone, and we never see them. The one
+  thing that can leave it is Giftmint Plus iCloud sync — off by default, into your own private iCloud.
 </div>
 
 <h2>1. What we do not do</h2>
@@ -44,18 +45,21 @@ in plain language.</p>
   <li>We do not sell, rent, or share your information with anyone.</li>
   <li>We do not send your information to our own servers — we do not operate any.</li>
 </ul>
-<p>The rest of this page describes the one exception category: information that stays on your
-iPhone, and the few occasions when Apple processes something on your behalf.</p>
+<p>The rest of this page describes what the app stores, and the few occasions when Apple processes
+something on your behalf.</p>
 
 <h2>2. What the app stores, and where</h2>
 <p>Everything you enter or scan is stored in the app's private storage area on your iPhone:</p>
 <ul>
   <li><strong>Card details</strong> — brand, type, current balance, original value, expiry date,
-      purchase state, notes, colour and a masked (partially hidden) card number, in the app's private
-      on-device database.</li>
-  <li><strong>Card number and PIN</strong> — held in the iOS <strong>Keychain</strong>, the system's
-      encrypted credential store, marked as accessible only while the device is unlocked and only on
-      this device. They are not stored in the app's database.</li>
+      purchase state, notes, colour, saved barcode data and a masked (partially hidden) card number, in
+      the app's private on-device database. That database stays on your iPhone unless you turn on
+      Giftmint Plus iCloud sync, which is described in section 5.</li>
+  <li><strong>Card number and PIN</strong> — the number and PIN the app reveals at checkout are held in
+      the iOS <strong>Keychain</strong>, the system's encrypted credential store, marked as accessible
+      only while the device is unlocked and only on this device. The Keychain is not part of the app's
+      database and is never synced. If a card has no barcode, the app saves its number as the barcode so
+      it can still be shown at the till; that value is part of the card record.</li>
   <li><strong>Photos you import</strong> — if you add a card by photograph, the image is stored in the
       app's private storage so you can view it later. Any text read from the image is read on your
       iPhone.</li>
@@ -104,8 +108,17 @@ detail. The app only asks Apple's StoreKit whether an active subscription exists
 your purchase is described in Apple's own privacy policy.</p>
 
 <h2>5. What leaves your device, and when</h2>
-<p>Giftmint itself does not transmit your data. Three things can involve Apple, and only these:</p>
+<p>Giftmint has no server of its own and we never receive your data. Four things can involve Apple,
+and only these:</p>
 <ul>
+  <li><strong>iCloud sync (Giftmint Plus, off by default).</strong> If you switch it on, your wallet —
+      card names, balances, dates, notes, saved barcode data and card photos — is kept in your own
+      <em>private</em> iCloud database using Apple's CloudKit, so it can appear on your other devices.
+      That database belongs to your Apple ID and we cannot read it. The card numbers and PINs the app
+      reveals for checkout stay in the device Keychain instead, but be aware that a saved barcode or a
+      photograph of a card can itself contain the number, and those are part of what syncs. Switching
+      iCloud sync off stops further syncing; records already stored in your iCloud are managed by you
+      in iCloud settings.</li>
   <li><strong>Nearby store lookups.</strong> If you enable nearby alerts, finding stores near you uses
       Apple's Maps services. Those requests go to Apple under Apple's privacy policy, and are for
       store locations — not for your card details.</li>
@@ -129,8 +142,9 @@ from the device.</p>
   <li><strong>Delete a card</strong> in the app and its stored number and PIN are deleted from the
       Keychain.</li>
   <li><strong>Delete the app</strong> and its on-device data is removed from your iPhone.</li>
-  <li><strong>Turn off permissions</strong> at any time in iOS Settings; only the related feature
-      stops working.</li>
+  <li><strong>Turn off iCloud sync</strong> in the app's Settings, or off permissions at any time in
+      iOS Settings; only the related feature stops working. Data already stored in your private iCloud
+      is managed by you in iCloud settings.</li>
   <li><strong>Export your data</strong> yourself with the app's CSV export (included with Giftmint
       Plus). The export contains your card details but never your card numbers or PINs.</li>
 </ul>
